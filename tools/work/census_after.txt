@@ -1,0 +1,330 @@
+==============================================================================
+CASE: direct ct0-d1-i0
+  IHDR: depth=1 colortype=0 interlace=0
+  PIL: mode=1 size=(8, 8) info.keys=[]
+  img2pdf frame 0: color=1 fmt=PNG depth=1 smask=no palette_bytes=0
+  RESULT: ACCEPT
+
+==============================================================================
+CASE: direct ct0-d1-i1
+  IHDR: depth=1 colortype=0 interlace=1
+  PIL: mode=1 size=(8, 8) info.keys=['interlace']
+  img2pdf frame 0: color=1 fmt=CCITTGroup4 depth=1 smask=no palette_bytes=0
+  RESULT: ACCEPT
+
+==============================================================================
+CASE: direct ct0-d2-i0
+  IHDR: depth=2 colortype=0 interlace=0
+  PIL: mode=L size=(8, 8) info.keys=[]
+  img2pdf frame 0: color=L fmt=PNG depth=2 smask=no palette_bytes=0
+  RESULT: ACCEPT
+
+==============================================================================
+CASE: direct ct0-d2-i1
+  IHDR: depth=2 colortype=0 interlace=1
+  PIL: mode=L size=(8, 8) info.keys=['interlace']
+  img2pdf frame 0: color=L fmt=PNG depth=8 smask=no palette_bytes=0
+  RESULT: ACCEPT
+
+==============================================================================
+CASE: direct ct0-d4-i0
+  IHDR: depth=4 colortype=0 interlace=0
+  PIL: mode=L size=(8, 8) info.keys=[]
+  img2pdf frame 0: color=L fmt=PNG depth=4 smask=no palette_bytes=0
+  RESULT: ACCEPT
+
+==============================================================================
+CASE: direct ct0-d4-i1
+  IHDR: depth=4 colortype=0 interlace=1
+  PIL: mode=L size=(8, 8) info.keys=['interlace']
+  img2pdf frame 0: color=L fmt=PNG depth=8 smask=no palette_bytes=0
+  RESULT: ACCEPT
+
+==============================================================================
+CASE: direct ct0-d8-i0
+  IHDR: depth=8 colortype=0 interlace=0
+  PIL: mode=L size=(8, 8) info.keys=[]
+  img2pdf frame 0: color=L fmt=PNG depth=8 smask=no palette_bytes=0
+  RESULT: ACCEPT
+
+==============================================================================
+CASE: direct ct0-d8-i1
+  IHDR: depth=8 colortype=0 interlace=1
+  PIL: mode=L size=(8, 8) info.keys=['interlace']
+  img2pdf frame 0: color=L fmt=PNG depth=8 smask=no palette_bytes=0
+  RESULT: ACCEPT
+
+==============================================================================
+CASE: direct ct0-d16-i0
+  IHDR: depth=16 colortype=0 interlace=0
+  PIL: mode=I;16 size=(8, 8) info.keys=[]
+  img2pdf frame 0: color=L fmt=PNG depth=16 smask=no palette_bytes=0
+  RESULT: ACCEPT
+
+==============================================================================
+CASE: direct ct0-d16-i1
+  IHDR: depth=16 colortype=0 interlace=1
+  PIL: mode=I;16 size=(8, 8) info.keys=['interlace']
+  img2pdf frame 0: color=L fmt=PNG depth=16 smask=no palette_bytes=0
+  RESULT: ACCEPT
+
+==============================================================================
+CASE: direct ct2-d8-i0
+  IHDR: depth=8 colortype=2 interlace=0
+  PIL: mode=RGB size=(8, 8) info.keys=[]
+  img2pdf frame 0: color=RGB fmt=PNG depth=8 smask=no palette_bytes=0
+  RESULT: ACCEPT
+
+==============================================================================
+CASE: direct ct2-d8-i1
+  IHDR: depth=8 colortype=2 interlace=1
+  PIL: mode=RGB size=(8, 8) info.keys=['interlace']
+  img2pdf frame 0: color=RGB fmt=PNG depth=8 smask=no palette_bytes=0
+  RESULT: ACCEPT
+
+==============================================================================
+CASE: direct ct2-d16-i0
+  IHDR: depth=16 colortype=2 interlace=0
+  PIL: mode=RGB size=(8, 8) info.keys=[]
+  img2pdf frame 0: color=RGB fmt=PNG depth=16 smask=no palette_bytes=0
+  RESULT: ACCEPT
+
+==============================================================================
+CASE: direct ct2-d16-i1
+  IHDR: depth=16 colortype=2 interlace=1
+  PIL: mode=RGB size=(8, 8) info.keys=['interlace']
+  img2pdf frame 0: color=RGB fmt=PNG depth=8 smask=no palette_bytes=0
+  RESULT: ACCEPT
+
+==============================================================================
+CASE: direct ct4-d8-i0
+  IHDR: depth=8 colortype=4 interlace=0
+  PIL: mode=LA size=(8, 8) info.keys=[]
+  img2pdf frame 0: color=LA fmt=PNG depth=8 smask=yes palette_bytes=0
+  RESULT: ACCEPT
+
+==============================================================================
+CASE: direct ct4-d8-i1
+  IHDR: depth=8 colortype=4 interlace=1
+  PIL: mode=LA size=(8, 8) info.keys=['interlace']
+  img2pdf frame 0: color=LA fmt=PNG depth=8 smask=yes palette_bytes=0
+  RESULT: ACCEPT
+
+==============================================================================
+CASE: direct ct4-d16-i0
+  IHDR: depth=16 colortype=4 interlace=0
+  PIL: mode=RGBA size=(8, 8) info.keys=[]
+  RESULT: REJECT AlphaChannelError: Refusing to work with multiple >8bit channels.
+
+==============================================================================
+CASE: direct ct4-d16-i1
+  IHDR: depth=16 colortype=4 interlace=1
+  PIL: mode=RGBA size=(8, 8) info.keys=['interlace']
+  RESULT: REJECT AlphaChannelError: Refusing to work with multiple >8bit channels.
+
+==============================================================================
+CASE: direct ct6-d8-i0
+  IHDR: depth=8 colortype=6 interlace=0
+  PIL: mode=RGBA size=(8, 8) info.keys=[]
+  img2pdf frame 0: color=RGBA fmt=PNG depth=8 smask=yes palette_bytes=0
+  RESULT: ACCEPT
+
+==============================================================================
+CASE: direct ct6-d8-i1
+  IHDR: depth=8 colortype=6 interlace=1
+  PIL: mode=RGBA size=(8, 8) info.keys=['interlace']
+  img2pdf frame 0: color=RGBA fmt=PNG depth=8 smask=yes palette_bytes=0
+  RESULT: ACCEPT
+
+==============================================================================
+CASE: direct ct6-d16-i0
+  IHDR: depth=16 colortype=6 interlace=0
+  PIL: mode=RGBA size=(8, 8) info.keys=[]
+  RESULT: REJECT AlphaChannelError: Refusing to work with multiple >8bit channels.
+
+==============================================================================
+CASE: direct ct6-d16-i1
+  IHDR: depth=16 colortype=6 interlace=1
+  PIL: mode=RGBA size=(8, 8) info.keys=['interlace']
+  RESULT: REJECT AlphaChannelError: Refusing to work with multiple >8bit channels.
+
+==============================================================================
+CASE: indexed ct3-d1-i0
+  IHDR: depth=1 colortype=3 interlace=0
+  PIL: mode=P size=(8, 8) info.keys=[]
+  img2pdf frame 0: color=P fmt=PNG depth=1 smask=no palette_bytes=6
+  RESULT: ACCEPT
+
+==============================================================================
+CASE: indexed ct3-d1-i1
+  IHDR: depth=1 colortype=3 interlace=1
+  PIL: mode=P size=(8, 8) info.keys=['interlace']
+  img2pdf frame 0: color=P fmt=PNG depth=1 smask=no palette_bytes=6
+  RESULT: ACCEPT
+
+==============================================================================
+CASE: indexed+trns ct3-d1-i0
+  IHDR: depth=1 colortype=3 interlace=0
+  PIL: mode=P size=(8, 8) info.keys=['transparency']
+  PIL: transparency=0
+  img2pdf frame 0: color=P fmt=PNG depth=1 smask=yes palette_bytes=6
+  RESULT: ACCEPT
+
+==============================================================================
+CASE: indexed+trns ct3-d1-i1
+  IHDR: depth=1 colortype=3 interlace=1
+  PIL: mode=P size=(8, 8) info.keys=['interlace', 'transparency']
+  PIL: transparency=0
+  img2pdf frame 0: color=P fmt=PNG depth=1 smask=yes palette_bytes=6
+  RESULT: ACCEPT
+
+==============================================================================
+CASE: indexed ct3-d2-i0
+  IHDR: depth=2 colortype=3 interlace=0
+  PIL: mode=P size=(8, 8) info.keys=[]
+  img2pdf frame 0: color=P fmt=PNG depth=2 smask=no palette_bytes=12
+  RESULT: ACCEPT
+
+==============================================================================
+CASE: indexed ct3-d2-i1
+  IHDR: depth=2 colortype=3 interlace=1
+  PIL: mode=P size=(8, 8) info.keys=['interlace']
+  img2pdf frame 0: color=P fmt=PNG depth=2 smask=no palette_bytes=12
+  RESULT: ACCEPT
+
+==============================================================================
+CASE: indexed+trns ct3-d2-i0
+  IHDR: depth=2 colortype=3 interlace=0
+  PIL: mode=P size=(8, 8) info.keys=['transparency']
+  PIL: transparency=0
+  img2pdf frame 0: color=P fmt=PNG depth=2 smask=yes palette_bytes=12
+  RESULT: ACCEPT
+
+==============================================================================
+CASE: indexed+trns ct3-d2-i1
+  IHDR: depth=2 colortype=3 interlace=1
+  PIL: mode=P size=(8, 8) info.keys=['interlace', 'transparency']
+  PIL: transparency=0
+  img2pdf frame 0: color=P fmt=PNG depth=2 smask=yes palette_bytes=12
+  RESULT: ACCEPT
+
+==============================================================================
+CASE: indexed ct3-d4-i0
+  IHDR: depth=4 colortype=3 interlace=0
+  PIL: mode=P size=(8, 8) info.keys=[]
+  img2pdf frame 0: color=P fmt=PNG depth=4 smask=no palette_bytes=48
+  RESULT: ACCEPT
+
+==============================================================================
+CASE: indexed ct3-d4-i1
+  IHDR: depth=4 colortype=3 interlace=1
+  PIL: mode=P size=(8, 8) info.keys=['interlace']
+  img2pdf frame 0: color=P fmt=PNG depth=4 smask=no palette_bytes=48
+  RESULT: ACCEPT
+
+==============================================================================
+CASE: indexed+trns ct3-d4-i0
+  IHDR: depth=4 colortype=3 interlace=0
+  PIL: mode=P size=(8, 8) info.keys=['transparency']
+  PIL: transparency=0
+  img2pdf frame 0: color=P fmt=PNG depth=4 smask=yes palette_bytes=48
+  RESULT: ACCEPT
+
+==============================================================================
+CASE: indexed+trns ct3-d4-i1
+  IHDR: depth=4 colortype=3 interlace=1
+  PIL: mode=P size=(8, 8) info.keys=['interlace', 'transparency']
+  PIL: transparency=0
+  img2pdf frame 0: color=P fmt=PNG depth=4 smask=yes palette_bytes=48
+  RESULT: ACCEPT
+
+==============================================================================
+CASE: indexed ct3-d8-i0
+  IHDR: depth=8 colortype=3 interlace=0
+  PIL: mode=P size=(8, 8) info.keys=[]
+  img2pdf frame 0: color=P fmt=PNG depth=8 smask=no palette_bytes=768
+  RESULT: ACCEPT
+
+==============================================================================
+CASE: indexed ct3-d8-i1
+  IHDR: depth=8 colortype=3 interlace=1
+  PIL: mode=P size=(8, 8) info.keys=['interlace']
+  img2pdf frame 0: color=P fmt=PNG depth=8 smask=no palette_bytes=768
+  RESULT: ACCEPT
+
+==============================================================================
+CASE: indexed+trns ct3-d8-i0
+  IHDR: depth=8 colortype=3 interlace=0
+  PIL: mode=P size=(8, 8) info.keys=['transparency']
+  PIL: transparency=0
+  img2pdf frame 0: color=P fmt=PNG depth=8 smask=yes palette_bytes=768
+  RESULT: ACCEPT
+
+==============================================================================
+CASE: indexed+trns ct3-d8-i1
+  IHDR: depth=8 colortype=3 interlace=1
+  PIL: mode=P size=(8, 8) info.keys=['interlace', 'transparency']
+  PIL: transparency=0
+  img2pdf frame 0: color=P fmt=PNG depth=8 smask=yes palette_bytes=768
+  RESULT: ACCEPT
+
+==============================================================================
+CASE: trns ct0-d8-i0
+  IHDR: depth=8 colortype=0 interlace=0
+  PIL: mode=L size=(8, 8) info.keys=['transparency']
+  PIL: transparency=7
+  img2pdf frame 0: color=RGBA fmt=PNG depth=8 smask=yes palette_bytes=0
+  RESULT: ACCEPT
+
+==============================================================================
+CASE: trns ct0-d8-i1
+  IHDR: depth=8 colortype=0 interlace=1
+  PIL: mode=L size=(8, 8) info.keys=['interlace', 'transparency']
+  PIL: transparency=7
+  img2pdf frame 0: color=RGBA fmt=PNG depth=8 smask=yes palette_bytes=0
+  RESULT: ACCEPT
+
+==============================================================================
+CASE: trns ct0-d16-i0
+  IHDR: depth=16 colortype=0 interlace=0
+  PIL: mode=I;16 size=(8, 8) info.keys=['transparency']
+  PIL: transparency=1000
+  RESULT: REJECT AlphaChannelError: Refusing to work with multiple >8bit channels.
+
+==============================================================================
+CASE: trns ct0-d16-i1
+  IHDR: depth=16 colortype=0 interlace=1
+  PIL: mode=I;16 size=(8, 8) info.keys=['interlace', 'transparency']
+  PIL: transparency=1000
+  RESULT: REJECT AlphaChannelError: Refusing to work with multiple >8bit channels.
+
+==============================================================================
+CASE: trns ct2-d8-i0
+  IHDR: depth=8 colortype=2 interlace=0
+  PIL: mode=RGB size=(8, 8) info.keys=['transparency']
+  PIL: transparency=(7, 11, 13)
+  img2pdf frame 0: color=RGBA fmt=PNG depth=8 smask=yes palette_bytes=0
+  RESULT: ACCEPT
+
+==============================================================================
+CASE: trns ct2-d8-i1
+  IHDR: depth=8 colortype=2 interlace=1
+  PIL: mode=RGB size=(8, 8) info.keys=['interlace', 'transparency']
+  PIL: transparency=(7, 11, 13)
+  img2pdf frame 0: color=RGBA fmt=PNG depth=8 smask=yes palette_bytes=0
+  RESULT: ACCEPT
+
+==============================================================================
+CASE: trns ct2-d16-i0
+  IHDR: depth=16 colortype=2 interlace=0
+  PIL: mode=RGB size=(8, 8) info.keys=['transparency']
+  PIL: transparency=(1000, 2000, 3000)
+  RESULT: REJECT AlphaChannelError: Refusing to work with multiple >8bit channels.
+
+==============================================================================
+CASE: trns ct2-d16-i1
+  IHDR: depth=16 colortype=2 interlace=1
+  PIL: mode=RGB size=(8, 8) info.keys=['interlace', 'transparency']
+  PIL: transparency=(1000, 2000, 3000)
+  RESULT: REJECT AlphaChannelError: Refusing to work with multiple >8bit channels.
+

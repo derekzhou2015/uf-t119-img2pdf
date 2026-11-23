@@ -2467,8 +2467,16 @@ def read_images(
 
         logger.debug("Converting frame: %d" % img_page_count)
 
+        # Pass rawdata so that get_imgmetadata() can inspect the PNG IHDR
+        # chunk. Without it, interlaced 16-bit PNGs with transparency bypass
+        # the depth guard (PIL lossily converts them to 8-bit before we ever
+        # look at them) and interlaced 16-bit grayscale PNGs fail later with
+        # an opaque "unknown colorspace" error because PIL exposes them as
+        # the non-enum "I;16" mode. This makes the interlaced path honour
+        # the same AlphaChannelError contract as the non-interlaced direct
+        # IDAT embedding path above.
         color, ndpi, imgwidthpx, imgheightpx, rotation, iccp = get_imgmetadata(
-            imgdata, imgformat, default_dpi, colorspace, rotreq=rot
+            imgdata, imgformat, default_dpi, colorspace, rawdata, rot
         )
 
         newimg = None

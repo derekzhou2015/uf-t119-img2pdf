@@ -82,7 +82,7 @@ for prog in ["convert", "compare", "identify"]:
     try:
         subprocess.check_call([prog] + ["-version"], stderr=subprocess.STDOUT)
         globals()[prog.upper()] = [prog]
-    except subprocess.CalledProcessError:
+    except (subprocess.CalledProcessError, FileNotFoundError, OSError):
         globals()[prog.upper()] = ["magick", prog]
 
 HAVE_IMAGEMAGICK_MODERN = True
